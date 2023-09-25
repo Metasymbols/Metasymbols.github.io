@@ -1,0 +1,55 @@
+# 网站名称
+site_name: Material for MkDocs 文档
+# 根url
+site_url: https://github.com/Metasymbols.github.io
+site_description: null
+# 作者
+site_author: null
+
+# 导航区展示对应开源项目名称
+repo_name: Metasymbols.github.io
+# 导航区展示对应开源项目地址
+repo_url: https://github.com/Metasymbols/Metasymbols.github.io
+
+# 主题
+theme:
+    name: material
+    features:
+        # 代码块复制
+        - content.code.copy
+        # 编辑此页面按钮，未生效
+        - content.action.edit
+        # 查看源代码按钮，
+        - content.action.view
+        # 页脚中的“上一个”和“下一个”按钮
+        - navigation.footer
+    
+    palette:
+        # 导航颜色
+        primary: 'indigo'
+        accent: 'indigo'
+    palette:  
+        # 浅色模式
+        - scheme: default
+          toggle:
+            icon: material/toggle-switch
+            name: Switch to dark mode
+
+        # 深色模式 
+        - scheme: slate
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: Switch to light mode
+        
+    # 设置语言   
+    extra:
+        alternate:
+            - name: English
+              link: /en/ 
+              lang: en
+            - name: Chinese
+              link: /zh/
+              lang: zh
+
+    
+    
