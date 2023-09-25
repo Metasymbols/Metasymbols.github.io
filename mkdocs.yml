@@ -6,10 +6,14 @@ site_description: null
 # 作者
 site_author: null
 
-# 导航区展示对应开源项目名称
+# 添加 git 存储库，导航区展示对应开源项目名称
 repo_name: Metasymbols.github.io
-# 导航区展示对应开源项目地址
+# 添加 git 存储库，导航区展示对应开源项目地址
 repo_url: https://github.com/Metasymbols/Metasymbols.github.io
+
+# 解析为托管文档的子文件夹
+edit_uri: edit/main/docs/
+
 
 # 主题
 theme:
@@ -28,19 +32,55 @@ theme:
         # 导航颜色
         primary: 'indigo'
         accent: 'indigo'
-    palette:  
+    # palette:  
         # 浅色模式
-        - scheme: default
-          toggle:
-            icon: material/toggle-switch
-            name: Switch to dark mode
+        # - scheme: default
+          # toggle:
+            # icon: material/toggle-switch
+            # name: Switch to dark mode
 
         # 深色模式 
-        - scheme: slate
+        # - scheme: slate
+          # toggle:
+            # icon: material/toggle-switch-off-outline
+            # name: Switch to light mode
+        
+    palette:
+
+        # Palette toggle for automatic mode
+        - media: "(prefers-color-scheme)"
+          toggle: 
+            icon: material/brightness-auto
+            name: 切换跟随系统
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default 
           toggle:
             icon: material/toggle-switch-off-outline
-            name: Switch to light mode
-        
+            name: 切换暗模式
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+            icon: material/toggle-switch
+            name: 切换亮模式
+    
+    
+    plugins:
+        # 更新日期和在每个页面底部创建文档
+        - git-revision-date-localized:
+            enable_creation_date: true
+
+        # 呈现所有贡献者的 GitHub 头像
+        - git-committers:
+            repository: squidfunk/mkdocs-material
+            branch: main
+        # 从 git 中提取文档的作者并将其显示在每个页面的底部。
+        - git-authors
+    
+    
     # 设置语言   
     extra:
         alternate:
