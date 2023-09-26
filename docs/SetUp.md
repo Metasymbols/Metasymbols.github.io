@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 配置
 
 

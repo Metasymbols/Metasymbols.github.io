@@ -2,28 +2,24 @@
 site_name: Material for MkDocs 文档
 # 根url
 site_url: https://github.com/Metasymbols.github.io
-
 # 描述
 site_description: null
-
 # 作者
-site_author: shangshanruoshui
-
+site_author: ruoshui
 # 添加 git 存储库，导航区展示对应开源项目名称
 repo_name: Metasymbols.github.io
 # 添加 git 存储库，导航区展示对应开源项目地址
 repo_url: https://github.com/Metasymbols/Metasymbols.github.io
-
 # 解析为托管文档的子文件夹
 edit_uri: edit/main/docs/
-
 # 版权
-copyright: Copyright &copy; 2022 - 2023 shangshanruoshui
+copyright: Copyright &copy; 2022 - 2023 ruoshui
 
 
-# 主题
+# 主题配置
 theme:
     name: material
+    custom_dir: docs/overrides
     features:
         # 代码块复制
         - content.code.copy
@@ -31,13 +27,13 @@ theme:
         - content.action.edit
         # 查看源代码按钮，
         - content.action.view
-        # 页脚中的“上一个”和“下一个”按钮
-        - navigation.footer
+        # # 页脚中的“上一个”和“下一个”按钮
+        # - navigation.footer
     
     palette:
-        # 导航颜色
-        primary: 'indigo'
-        accent: 'indigo'
+        # 主颜色
+        primary: white
+        accent: grey
     # palette:  
         # 浅色模式
         # - scheme: default
@@ -85,6 +81,11 @@ theme:
             branch: main
         # 从 git 中提取文档的作者并将其显示在每个页面的底部。
         - git-authors
+        
+        # # 元文件设置
+        # - meta
+        # 启动内置搜索
+        - search
     
     
     # 设置语言   
@@ -96,10 +97,12 @@ theme:
             - name: Chinese
               link: /zh/
               lang: zh
-    
-# 目录
+
+# 页面目录
 nav:
+    
     - 基础: index.md
+    
     - 设置: SetUp.md
     
     
