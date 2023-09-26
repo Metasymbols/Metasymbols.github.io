@@ -2,9 +2,12 @@
 site_name: Material for MkDocs 文档
 # 根url
 site_url: https://github.com/Metasymbols.github.io
+
+# 描述
 site_description: null
+
 # 作者
-site_author: null
+site_author: shangshanruoshui
 
 # 添加 git 存储库，导航区展示对应开源项目名称
 repo_name: Metasymbols.github.io
@@ -13,6 +16,9 @@ repo_url: https://github.com/Metasymbols/Metasymbols.github.io
 
 # 解析为托管文档的子文件夹
 edit_uri: edit/main/docs/
+
+# 版权
+copyright: Copyright &copy; 2022 - 2023 shangshanruoshui
 
 
 # 主题
@@ -57,14 +63,14 @@ theme:
         - media: "(prefers-color-scheme: light)"
           scheme: default 
           toggle:
-            icon: material/toggle-switch-off-outline
+            icon: material/theme-light-dark
             name: 切换暗模式
 
         # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
           scheme: slate
           toggle:
-            icon: material/toggle-switch
+            icon: material/theme-light-dark
             name: 切换亮模式
     
     
@@ -90,6 +96,10 @@ theme:
             - name: Chinese
               link: /zh/
               lang: zh
-
+    
+# 目录
+nav:
+    - 基础: index.md
+    - 设置: SetUp.md
     
     
